@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data
+        >
+        <variable
+            name="mvvmregister"
+            type="com.task.loginpage.viewmodel.ViewModelLogin" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.RegisterFragment">
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntreg_tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_registr"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.232"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.059" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntreg_tv_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_firstname"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.260"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.043" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntreg_container_firstname"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.1"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntreg_et_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape1"
+                android:text="@={mvvmregister.firstname}"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntreg_tv_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_lastname"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.260"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.214" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntreg_container_lastname"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.295"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntreg_et_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape1"
+                android:text="@={mvvmregister.lastname}"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntreg_tv_emailadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_mailaddress"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.260"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.399" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/frgmntreg_tv_usercheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="(Required)"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:visibility="visible"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.563" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntreg_tv_username"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.490"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntreg_et_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={mvvmregister.username}"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/shape1"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntreg_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_password"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.260"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.611" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntreg_container_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.70"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntreg_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape1"
+                android:text="@={mvvmregister.password}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/frgmntreg_tv_passcheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="(Required)"
+            android:textSize="13dp"
+            android:visibility="visible"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.776" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottonregister"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape3"
+            android:text="@string/text_btnregister"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.552"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntreg_tv_signup"
+            app:layout_constraintVertical_bias="0.91" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

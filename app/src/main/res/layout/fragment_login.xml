@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+
+        <variable
+            name="mvvmlogin"
+            type="com.task.loginpage.viewmodel.ViewModelLogin" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SingInFragment"
+        >
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_signin"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.274"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_emailaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_mailaddress"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.321"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.079" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntlogin_container_email"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.14"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntlogin_et_email"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shape1"
+                android:text="@={mvvmlogin.username}"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_password"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.276"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.259" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frgmntlogin_container_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.322"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frgmntlogin_et_password"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shape1"
+                android:text="@={mvvmlogin.password}"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:textColor="#F42D2D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.45" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bottonlogin"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape3"
+            android:text="@string/text_btnlogin"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:onClick="@{()->mvvmlogin.loginButton()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frgmntlogin_tv_signin"
+            app:layout_constraintVertical_bias="0.54" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_loginwith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_loginwith"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottonlogin"
+            app:layout_constraintVertical_bias="0.176" />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/frgmntlogin_image_gmaillogin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gmaillicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottonlogin"
+            app:layout_constraintVertical_bias="0.403" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frgmntlogin_tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_signup"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottonlogin"
+            app:layout_constraintVertical_bias="0.687" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

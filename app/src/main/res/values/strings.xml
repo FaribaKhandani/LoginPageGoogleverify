@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">LoginPageGoogleverify</string>
+
+
+    <string name="text_signup">Not registered yes?<font color='#01C6DB'>Sing up!</font></string>
+    <string name="text_loginwith">You can also login with...</string>
+    <string name="text_btnlogin">Login</string>
+    <string name="text_btnregister">Login</string>
+    <string name="text_password">Password</string>
+    <string name="text_mailaddress">Email Address</string>
+    <string name="text_signin">Sign In</string>
+    <string name="text_registr">Sign Up</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_txthelper">Required</string>
+    <string name="txt_firstname">Firstname</string>
+    <string name="txt_lastname">Lastname</string>
+    <string name="facebook_app_id">511795909507190</string>
+    <string name="fb_login_protocol_scheme">fb511795909507190</string>
+    <string name="web">17483597662-mk9rno0cqhirplic6ume67ekciabfp1m.apps.googleusercontent.com</string>
 </resources>
