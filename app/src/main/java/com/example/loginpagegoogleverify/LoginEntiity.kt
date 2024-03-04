@@ -1,5 +1,9 @@
 package com.example.loginpagegoogleverify
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 @Entity(tableName = "logintable")
 
 data class LoginEntity (

@@ -7,9 +7,10 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Observable
 import java.util.regex.Pattern
 
-class ViewModelLogin(val repositoryLogin: RepositoryLogin) : ViewModel(), Observable{
+class ViewModelLogin(val repositoryLogin: RepositoryLogin) : ViewModel(), Observable {
 
 
     val users = repositoryLogin.usersLogin
