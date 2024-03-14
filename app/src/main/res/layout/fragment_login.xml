@@ -8,7 +8,7 @@
 
         <variable
             name="mvvmlogin"
-            type="com.task.loginpage.viewmodel.ViewModelLogin" />
+            type="com.example.loginpagegoogleverify.ViewModelLogin" />
 
     </data>
 

@@ -1,16 +1,18 @@
 package com.example.loginpagegoogleverify
 
 import android.util.Patterns
+import androidx.databinding.Bindable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.Observable
 import java.util.regex.Pattern
 
-class ViewModelLogin(val repositoryLogin: RepositoryLogin) : ViewModel(), Observable {
+class ViewModelLogin(val repositoryLogin: RepositoryLogin) : ViewModel(), androidx.databinding.Observable{
 
 
     val users = repositoryLogin.usersLogin
@@ -158,15 +160,13 @@ class ViewModelLogin(val repositoryLogin: RepositoryLogin) : ViewModel(), Observ
         }
     }
 
-
-    override fun addOnPropertyChangedCallback(p0: Observable.OnPropertyChangedCallback?) {
-
+    override fun addOnPropertyChangedCallback(callback: androidx.databinding.Observable.OnPropertyChangedCallback?) {
+        TODO("Not yet implemented")
     }
 
-    override fun removeOnPropertyChangedCallback(p0: Observable.OnPropertyChangedCallback?) {
-
+    override fun removeOnPropertyChangedCallback(callback: androidx.databinding.Observable.OnPropertyChangedCallback?) {
+        TODO("Not yet implemented")
     }
-
 
 
 }
