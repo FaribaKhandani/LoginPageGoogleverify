@@ -9,7 +9,7 @@
         >
         <variable
             name="mvvmregister"
-            type="com.task.loginpage.viewmodel.ViewModelLogin" />
+            type="com.example.loginpagegoogleverify.ViewModelLogin" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
