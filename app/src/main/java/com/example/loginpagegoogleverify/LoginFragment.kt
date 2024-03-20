@@ -157,12 +157,7 @@ class LoginFragment : Fragment() {
 
         completedTask.getResult(ApiException::class.java)
         Toast.makeText(activity,"successful", Toast.LENGTH_LONG).show()
-       // val intent = Intent(activity, ActivityNews::class.java)
-      //  startActivity(intent)
 
-        // val transaction = requireActivity().supportFragmentManager.beginTransaction()
-        // transaction.replace(R.id.fragmentContainerV, newsFragment)
-        //  transaction.commit()
     }
 
 
